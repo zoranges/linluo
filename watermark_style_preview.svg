@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1067" viewBox="0 0 1600 1067">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#91b7c4"/>
+      <stop offset="0.45" stop-color="#d7b480"/>
+      <stop offset="1" stop-color="#2a403f"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="28%" cy="24%" r="45%">
+      <stop offset="0" stop-color="#ffe2a8" stop-opacity="0.9"/>
+      <stop offset="0.52" stop-color="#d7a057" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#1b2b2f" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="filmSoftness">
+      <feGaussianBlur stdDeviation="0.35"/>
+    </filter>
+    <filter id="amberGlow" x="-30%" y="-70%" width="160%" height="240%">
+      <feDropShadow dx="0" dy="0" stdDeviation="1.7" flood-color="#ffb11f" flood-opacity="0.72"/>
+      <feDropShadow dx="0.9" dy="1" stdDeviation="0.3" flood-color="#553000" flood-opacity="0.48"/>
+    </filter>
+    <pattern id="grain" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.55" fill="#ffffff" opacity="0.11"/>
+      <circle cx="4" cy="3" r="0.45" fill="#000000" opacity="0.13"/>
+      <circle cx="2.5" cy="4.5" r="0.35" fill="#fff3d2" opacity="0.08"/>
+    </pattern>
+    <mask id="vignette">
+      <rect width="1600" height="1067" fill="white"/>
+      <radialGradient id="vig" cx="50%" cy="46%" r="67%">
+        <stop offset="0.68" stop-color="white"/>
+        <stop offset="1" stop-color="black"/>
+      </radialGradient>
+      <rect width="1600" height="1067" fill="url(#vig)"/>
+    </mask>
+  </defs>
+
+  <rect width="1600" height="1067" fill="#111"/>
+  <g filter="url(#filmSoftness)">
+    <rect width="1600" height="1067" fill="url(#sky)"/>
+    <rect width="1600" height="1067" fill="url(#sun)"/>
+    <path d="M0 780 C260 690 410 720 620 660 C850 590 1060 610 1600 440 L1600 1067 L0 1067 Z" fill="#3e5650" opacity="0.94"/>
+    <path d="M0 830 C250 765 510 800 770 730 C1030 660 1260 680 1600 575 L1600 1067 L0 1067 Z" fill="#1d302f" opacity="0.9"/>
+    <path d="M150 342 C248 270 360 276 462 354 C550 421 657 418 725 360 C802 293 917 304 1014 386 C1118 474 1260 467 1363 392 C1448 330 1527 334 1600 388 L1600 1067 L0 1067 L0 420 C54 402 100 380 150 342 Z" fill="#e7d5a7" opacity="0.26"/>
+    <path d="M104 850 C228 814 324 826 439 790 C611 736 739 754 879 710 C1000 672 1140 676 1280 620 C1405 570 1494 555 1600 553 L1600 1067 L0 1067 L0 891 C34 878 68 862 104 850 Z" fill="#101b1e" opacity="0.76"/>
+  </g>
+  <rect width="1600" height="1067" fill="url(#grain)" opacity="0.48"/>
+  <rect width="1600" height="1067" fill="#000" opacity="0.34" mask="url(#vignette)"/>
+
+  <g transform="translate(1087 917)" filter="url(#amberGlow)">
+    <text x="0" y="0"
+          font-family="Bahnschrift, 'Arial Narrow', Arial, sans-serif"
+          font-size="54"
+          font-weight="600"
+          letter-spacing="2.8"
+          fill="#ffb323"
+          opacity="0.93">2026 06 17</text>
+    <text x="1.4" y="-0.7"
+          font-family="Bahnschrift, 'Arial Narrow', Arial, sans-serif"
+          font-size="54"
+          font-weight="600"
+          letter-spacing="2.8"
+          fill="#ffd46a"
+          opacity="0.34">2026 06 17</text>
+    <text x="2" y="45"
+          font-family="Bahnschrift, 'Arial Narrow', Arial, sans-serif"
+          font-size="31"
+          font-weight="500"
+          letter-spacing="2.2"
+          fill="#ffb323"
+          opacity="0.72">21:08</text>
+  </g>
+</svg>
